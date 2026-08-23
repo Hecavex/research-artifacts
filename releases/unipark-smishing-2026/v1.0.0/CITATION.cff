@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Cite this versioned data release and the associated HECAVEX investigation."
+title: "UNIPARK-Themed Smishing and Parking Phishing-Kit Research Data"
+version: 1.0.0
+date-released: "2026-08-14"
+type: dataset
+authors:
+  - family-names: "Lis"
+    given-names: "Deividas"
+    affiliation: "HECAVEX"
+url: "https://hecavex.com/en/research/unipark-smishing-campaign-infrastructure/"
+repository-code: "https://github.com/Hecavex/research-artifacts"
+license: "CC-BY-4.0"
+keywords:
+  - UNIPARK
+  - smishing
+  - phishing kit
+  - infrastructure pivoting
+  - URLScan
+  - Lithuania

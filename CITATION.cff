@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Cite the specific versioned release used in your work."
+title: "HECAVEX Research Artifacts"
+version: 1.0.0
+date-released: "2026-08-14"
+type: dataset
+authors:
+  - family-names: "Lis"
+    given-names: "Deividas"
+    affiliation: "HECAVEX"
+url: "https://hecavex.com/"
+repository-code: "https://github.com/Hecavex/research-artifacts"
+license: "CC-BY-4.0"
+keywords:
+  - cyber threat intelligence
+  - research evidence
+  - infrastructure pivoting
+  - threat hunting

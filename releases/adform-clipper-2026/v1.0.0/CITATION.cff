@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Cite this versioned data release and the associated HECAVEX article."
+title: "Adform JavaScript Supply-Chain Crypto-Clipper Research Data"
+version: 1.0.0
+date-released: "2026-08-14"
+type: dataset
+authors:
+  - family-names: "Lis"
+    given-names: "Deividas"
+    affiliation: "HECAVEX"
+url: "https://hecavex.com/en/research/adform-supply-chain-crypto-clipper/"
+license: "CC-BY-4.0"
+keywords:
+  - Adform
+  - JavaScript
+  - supply-chain attack
+  - crypto clipper
+  - URLScan
+

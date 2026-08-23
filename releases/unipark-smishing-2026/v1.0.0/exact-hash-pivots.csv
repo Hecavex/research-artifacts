@@ -1,0 +1,6 @@
+"asset_name","sha256","documented_public_match","observation_count","role","confidence","notes"
+"CMjzun1n.js","8d5e6597ebac3ca5419ad4fe5c422fb59f98948d5fa32365b1730bdd06f005dc","unipark.fxqro[.]xin",1,"UNIPARK brand adapter","high","Exact static-asset match with the earlier UNIPARK deployment"
+"BD53Kn13.js","0bdd6862589aeb9603ba1d3a8f3efe85ed987f16a954816ad85debd13c39919a","unipark.fxqro[.]xin",1,"shared phishing engine","high","Exact static-asset match with the earlier UNIPARK deployment"
+"BbPeY660.css","34008efeed81b1f951e7ce4e95760293729ae1e84affe5115570317d3f2d4c26","unipark.fxqro[.]xin",1,"presentation layer","high","Exact static-asset match with the earlier UNIPARK deployment"
+"C6NDXE1b.css","b38ea1ff18118191c1ccdd92a882ac5d2132e2393fddb4c2132476b25924e922","unipark.fxqro[.]xin",1,"presentation layer","high","Exact static-asset match with the earlier UNIPARK deployment"
+"DDXZMe5D.js","7068d7b09a8afb99b051847dd65602e054f69c33d0cd8161ab986eae71538a2b","parking phishing-kit family",163,"Vue and Socket.IO/Engine.IO core","high","Public URLScan response-hash pivot produced 163 scan records across 126 unique page hostnames"

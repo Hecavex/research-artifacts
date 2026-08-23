@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "case": "HCVX-PARKING-KIT-2026",
+  "nodes": [
+    {"id":"sms","type":"observation","label":"UNIPARK-themed SMS"},
+    {"id":"fmqr","type":"url","label":"unipark.fmqr[.]ink/com"},
+    {"id":"fxqro","type":"url","label":"unipark.fxqro[.]xin/com"},
+    {"id":"frontend-hashes","type":"hash-set","label":"4 exact frontend asset hashes"},
+    {"id":"core-hash","type":"sha256","label":"7068d7b0…71538a2b"},
+    {"id":"urlscan-set","type":"derived-set","label":"163 scans / 126 hostnames"},
+    {"id":"console","type":"path","label":"/console"},
+    {"id":"direct-layer","type":"infrastructure-set","label":"12 direct AS132203 addresses"},
+    {"id":"cluster","type":"analytical-cluster","label":"HCVX-PARKING-KIT-2026"},
+    {"id":"jwr","type":"comparison","label":"Cisco Talos JWR framework"}
+  ],
+  "edges": [
+    {"source":"sms","target":"fmqr","relationship":"contained URL","evidence_class":"observed","confidence":"high","source_id":"src-primary-sms"},
+    {"source":"fmqr","target":"frontend-hashes","relationship":"served assets with","evidence_class":"observed","confidence":"high","source_id":"src-article"},
+    {"source":"fxqro","target":"frontend-hashes","relationship":"served same assets","evidence_class":"observed","confidence":"high","source_id":"src-urlscan-fxqro"},
+    {"source":"fmqr","target":"core-hash","relationship":"used core bundle","evidence_class":"observed","confidence":"high","source_id":"src-article"},
+    {"source":"core-hash","target":"urlscan-set","relationship":"exact-hash pivot produced","evidence_class":"observed","confidence":"high","source_id":"src-urlscan-hash"},
+    {"source":"urlscan-set","target":"console","relationship":"all records contacted","evidence_class":"observed","confidence":"high","source_id":"src-urlscan-console"},
+    {"source":"urlscan-set","target":"direct-layer","relationship":"included direct delivery through","evidence_class":"observed","confidence":"high","source_id":"src-article"},
+    {"source":"urlscan-set","target":"cluster","relationship":"supports common software family","evidence_class":"assessed","confidence":"high","note":"Does not by itself prove one operator"},
+    {"source":"cluster","target":"jwr","relationship":"shares tradecraft but no exact IOC overlap","evidence_class":"assessed","confidence":"high","note":"Direct lineage or one operator is low confidence"}
+  ]
+}

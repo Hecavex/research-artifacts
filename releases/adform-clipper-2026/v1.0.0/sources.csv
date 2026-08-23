@@ -1,0 +1,7 @@
+source_id,title,publisher,published_at,accessed_at,url,archived_url,source_type,role,notes
+adform-incident-update,"Security Incident - Company Update",Adform,2026-08-05,2026-08-08,https://site.adform.com/resources/newsroom/security-incident-company-update/,,vendor-research,"incident timing and impact","Adform's retrospective incident statement"
+adform-custom-naming,"Custom Naming JavaScript",Adform,,2026-08-08,https://www.adformhelp.com/hc/en-us/articles/10023216886545-Custom-Naming-JavaScript,,vendor-documentation,"script deployment model","Legitimate product documentation"
+public-gist,"Captured malicious code",GitHub Gist,,2026-08-08,https://gist.github.com/malexmave/8ef5eabc7b6866698f1ea8a811c75b57,,community,"public sample source","Analyst-added comment changes the full-file hash; see the article and IOC notes"
+urlscan-search-docs,"URLScan Search API documentation",URLScan,,2026-08-08,https://urlscan.io/docs/search/,,technical-documentation,"definition of response hash search","Used to interpret exact-response-hash observations"
+the-hacker-news,"Hackers Poison Adform Script to Swap Crypto Wallet Addresses in Supply Chain Attack",The Hacker News,2026-08-01,2026-08-08,https://thehackernews.com/2026/08/hackers-poison-adform-script-to-swap.html,,media,"incident discovery context","Secondary reporting"
+

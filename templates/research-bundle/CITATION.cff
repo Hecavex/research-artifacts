@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Cite this versioned research release and its associated HECAVEX article."
+title: "REPLACE WITH RELEASE TITLE"
+version: 0.1.0
+date-released: "YYYY-MM-DD"
+type: dataset
+authors:
+  - family-names: "Lis"
+    given-names: "Deividas"
+    affiliation: "HECAVEX"
+url: "https://hecavex.com/"
+license: "CC-BY-4.0"
+
