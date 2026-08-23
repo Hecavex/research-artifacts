@@ -36,7 +36,7 @@ docs/
 
 ## Published bundles
 
-- `adform-clipper-2026/v1.0.0` — evidence package supporting the Adform JavaScript supply-chain investigation.
+- `adform-clipper-2026/v1.1.0` — current evidence package supporting the Adform JavaScript supply-chain investigation, including reproducible BTC and Ethereum tracing. `v1.0.0` remains immutable.
 - `unipark-smishing-2026/v1.0.0` — structured evidence supporting the UNIPARK-themed smishing and parking phishing-kit investigation.
 
 ## Validate releases
@@ -48,7 +48,7 @@ The validator discovers every semantic-version directory, checks required files,
 python scripts/validate_bundle.py --all
 
 # One release while authoring
-python scripts/validate_bundle.py releases/adform-clipper-2026/v1.0.0
+python scripts/validate_bundle.py releases/adform-clipper-2026/v1.1.0
 ```
 
 ## Citation
