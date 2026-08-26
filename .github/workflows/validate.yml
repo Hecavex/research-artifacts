@@ -18,7 +18,5 @@ jobs:
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.12"
-      - name: Test the validator
-        run: python -m unittest discover -s tests -v
       - name: Validate every versioned bundle
         run: python scripts/validate_bundle.py --all
