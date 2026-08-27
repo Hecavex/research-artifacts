@@ -26,6 +26,7 @@ releases/
       evidence-manifest.csv
       observations.csv
       indicators.csv
+      <case-specific-data>.csv
       sources.csv
       graph.json
 templates/
@@ -36,7 +37,10 @@ docs/
 
 ## Published bundles
 
+- `hostinger-pages-phishing-2026/v1.1.0` - current publication-safe evidence for the Hostinger-themed Cloudflare Pages phishing investigation, including the complete defanged and role-classified domain inventory plus a bounded fixed-path response comparison. It excludes raw campaign content, full task URLs, personalized query strings, private scan identifiers and provider correspondence. `v1.0.0` remains immutable.
+
 - `adform-clipper-2026/v1.1.0` — current evidence package supporting the Adform JavaScript supply-chain investigation, including reproducible BTC and Ethereum tracing. `v1.0.0` remains immutable.
+
 - `unipark-smishing-2026/v1.0.0` — structured evidence supporting the UNIPARK-themed smishing and parking phishing-kit investigation.
 
 ## Validate releases

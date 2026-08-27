@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Cite this versioned data release and the associated HECAVEX investigation."
+title: "Hostinger-Themed Cloudflare Pages Phishing Research Data"
+version: 1.1.0
+date-released: 2026-08-24
+type: dataset
+authors:
+  - family-names: "Lis"
+    given-names: "Deividas"
+    affiliation: "HECAVEX"
+url: "https://hecavex.com/en/research/hostinger-pages-phishing-infrastructure/"
+repository-code: "https://github.com/Hecavex/research-artifacts"
+license: "CC-BY-4.0"
+keywords:
+  - Hostinger
+  - phishing kit
+  - credential phishing
+  - Cloudflare Pages
+  - infrastructure pivoting
+  - URLScan

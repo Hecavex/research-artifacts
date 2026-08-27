@@ -1,0 +1,121 @@
+{
+  "schema_version": "2.0.0",
+  "case": {
+    "id": "hostinger-pages-phishing-2026",
+    "title": "Hostinger-themed Cloudflare Pages phishing infrastructure",
+    "status": "published",
+    "updated": "2026-08-24",
+    "research": "https://hecavex.com/en/research/hostinger-pages-phishing-infrastructure/",
+    "evidence_bundle": "https://hecavex.com/assets/data/hostinger-pages-phishing-2026/README.md",
+    "boundary": "Exact code and content hashes support a Hostinger-themed credential-phishing software family. Naming shape and shared path grammar do not establish one operator, one provider account, victim count or Hostinger compromise."
+  },
+  "nodes": [
+    {
+      "id": "subset",
+      "class": "observed",
+      "label": "30 public scans across 25 task domains",
+      "short_label": ["30 scans", "25 task domains"],
+      "x": 110,
+      "y": 105,
+      "meaning": "The local Observatory subset supplied the initial Hostinger-themed Pages cluster. Scan observations are collection events, not victims or deliveries.",
+      "confidence": "direct saved observation",
+      "evidence_label": "Aggregate observations",
+      "evidence": "https://hecavex.com/assets/data/hostinger-pages-phishing-2026/observations.csv"
+    },
+    {
+      "id": "core",
+      "class": "observed",
+      "label": "Exact credential-harvester code reuse",
+      "short_label": ["467 observations", "262 task domains"],
+      "x": 360,
+      "y": 105,
+      "meaning": "One exact JavaScript SHA-256 reads login fields and prepares credential-bearing POST requests. Byte identity supports software lineage, not human attribution.",
+      "confidence": "high",
+      "evidence_label": "Exact-hash pivots",
+      "evidence": "https://hecavex.com/assets/data/hostinger-pages-phishing-2026/exact-hash-pivots.csv"
+    },
+    {
+      "id": "family",
+      "class": "derived",
+      "label": "298 task names and 299-name family union",
+      "short_label": ["298 task names", "299 cross-role union"],
+      "x": 640,
+      "y": 105,
+      "meaning": "The exact task query returns 298 names. One additional matching name appears only as a final page behind a short link.",
+      "confidence": "reproducible derivation",
+      "evidence_label": "Hostname statistics",
+      "evidence": "https://hecavex.com/assets/data/hostinger-pages-phishing-2026/hostname-generation-summary.csv"
+    },
+    {
+      "id": "naming",
+      "class": "assessment",
+      "label": "Automated deployment-name randomization",
+      "short_label": ["24 lowercase letters", "near-uniform output"],
+      "x": 900,
+      "y": 105,
+      "meaning": "Fixed length, full alphabet coverage, uniqueness and near-maximum character entropy support automated project naming. The generator implementation and future names remain unknown.",
+      "confidence": "high for automation",
+      "evidence_label": "Descriptive statistics",
+      "evidence": "https://hecavex.com/assets/data/hostinger-pages-phishing-2026/hostname-generation-summary.csv"
+    },
+    {
+      "id": "current",
+      "class": "observed",
+      "label": "Five exact live documents in an eight-host sample",
+      "short_label": ["5 exact", "2 warnings / 1 Cloudflare 522"],
+      "x": 245,
+      "y": 350,
+      "meaning": "A deterministic non-random check found five exact documents, two Cloudflare warning interstitials and one Cloudflare 522 response. The result cannot estimate family-wide uptime.",
+      "confidence": "high for bounded sample",
+      "evidence_label": "Infrastructure summary",
+      "evidence": "https://hecavex.com/assets/data/hostinger-pages-phishing-2026/infrastructure-summary.csv"
+    },
+    {
+      "id": "archive",
+      "class": "observed",
+      "label": "Zero valid archives from 25 fixed candidate paths",
+      "short_label": ["25 HTML responses", "0 valid ZIP"],
+      "x": 510,
+      "y": 350,
+      "meaning": "A later hash-gated check returned HTML for every fixed archive candidate. This is a narrow negative result, not proof that no kit archive existed elsewhere.",
+      "confidence": "high for checked scope",
+      "evidence_label": "Bounded-check record",
+      "evidence": "https://hecavex.com/assets/data/hostinger-pages-phishing-2026/observations.csv"
+    },
+    {
+      "id": "crossbrand",
+      "class": "derived",
+      "label": "67 same-shape domains across 12 lure prefixes",
+      "short_label": ["67 same-shape names", "12 lure prefixes"],
+      "x": 775,
+      "y": 350,
+      "meaning": "A partial preselected corpus shares a 24-letter naming shape and path grammar. The exact Hostinger harvester did not cross brands in the saved set.",
+      "confidence": "moderate context",
+      "evidence_label": "Cross-brand context",
+      "evidence": "https://hecavex.com/assets/data/hostinger-pages-phishing-2026/cross-brand-context.csv"
+    },
+    {
+      "id": "limit",
+      "class": "limitation",
+      "label": "Operator, victims and provider-account linkage unknown",
+      "short_label": ["Operator unknown", "Victim count unknown"],
+      "x": 640,
+      "y": 535,
+      "meaning": "Public scans and shared hosting cannot identify a human operator, prove one Cloudflare account, measure successful submissions or show Hostinger system compromise.",
+      "confidence": "explicit evidence boundary",
+      "evidence_label": "Research limitations",
+      "evidence": "https://hecavex.com/en/research/hostinger-pages-phishing-infrastructure/"
+    }
+  ],
+  "edges": [
+    { "source": "subset", "target": "core", "relationship": "seeded exact-hash pivot", "evidence_class": "observed", "confidence": "high", "source_id": "hecavex-investigation" },
+    { "source": "core", "target": "family", "relationship": "overlapped fixed-name family", "evidence_class": "observed", "confidence": "high", "source_id": "hecavex-investigation" },
+    { "source": "family", "target": "naming", "relationship": "supports automated naming", "evidence_class": "assessed", "confidence": "high", "note": "Observed distribution supports automation but does not reveal the generator implementation or seed." },
+    { "source": "family", "target": "current", "relationship": "provided bounded sample", "evidence_class": "observed", "confidence": "high for bounded sample", "source_id": "hecavex-investigation" },
+    { "source": "current", "target": "archive", "relationship": "gated fixed-path check", "evidence_class": "observed", "confidence": "high for checked scope", "source_id": "hecavex-investigation" },
+    { "source": "family", "target": "crossbrand", "relationship": "compared naming shape", "evidence_class": "assessed", "confidence": "moderate", "note": "The preselected corpus supports contextual comparison only and is not a prevalence sample." },
+    { "source": "naming", "target": "limit", "relationship": "does not identify operator", "evidence_class": "assessed", "confidence": "high", "note": "Descriptive hostname statistics cannot identify a human operator or provider account." },
+    { "source": "crossbrand", "target": "limit", "relationship": "does not prove exact reuse", "evidence_class": "assessed", "confidence": "high", "note": "Similar naming shape and path grammar did not include exact Hostinger-core reuse in the saved partial corpus." },
+    { "source": "current", "target": "limit", "relationship": "sample is not prevalence", "evidence_class": "assessed", "confidence": "high", "note": "The deterministic eight-host sample cannot estimate family-wide uptime or campaign prevalence." }
+  ]
+}

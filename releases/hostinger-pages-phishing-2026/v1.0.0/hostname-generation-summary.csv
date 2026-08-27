@@ -1,0 +1,4 @@
+"dataset","observations","unique_names","suffix_length","alphabet_size","entropy_bits_per_character","maximum_entropy","chi_square_df25","adjacent_repeat_rate","chronological_hamming_mean","time_base26_pearson_r","interpretation","source_id"
+"primary-task-query","562","298","24","26","4.6986947289","4.7004397181","17.2673","0.03560","23.0471","0.1114","Approximately uniform lowercase deployment labels; implementation and seed unknown","hecavex-investigation"
+"local-cross-role-union","564","299","24","26","4.6985870955","4.7004397181","18.4058","0.03548","23.0436","0.1098","298 task names plus one final-page-only exact-family name","hecavex-investigation"
+"partial-cross-brand-shape","","67","24","26","4.6892392932","4.7004397181","24.7935","","","","Compatible naming convention or builder output; not exact-code attribution","hecavex-investigation"
