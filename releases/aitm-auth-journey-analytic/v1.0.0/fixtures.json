@@ -1,0 +1,213 @@
+{
+  "synthetic": true,
+  "reference_time": "2026-09-01T00:00:00Z",
+  "notes": "Normalized synthetic records, not exported tenant telemetry. OriginApproved=false represents an independently reviewed authentication origin, not a string-match verdict. IP addresses are reserved documentation values.",
+  "clicks": [
+    {
+      "ClickId": "positive",
+      "UserKey": "positive-user",
+      "ClickTime": "2026-08-31T12:00:00Z",
+      "AuthHost": "login-review.example.invalid",
+      "ClickIP": "192.0.2.10",
+      "Navigated": true,
+      "OriginApproved": false
+    },
+    {
+      "ClickId": "approved",
+      "UserKey": "approved-user",
+      "ClickTime": "2026-08-31T12:00:00Z",
+      "AuthHost": "login-review.example.invalid",
+      "ClickIP": "192.0.2.10",
+      "Navigated": true,
+      "OriginApproved": true
+    },
+    {
+      "ClickId": "blocked",
+      "UserKey": "blocked-user",
+      "ClickTime": "2026-08-31T12:00:00Z",
+      "AuthHost": "login-review.example.invalid",
+      "ClickIP": "192.0.2.10",
+      "Navigated": false,
+      "OriginApproved": false
+    },
+    {
+      "ClickId": "failed",
+      "UserKey": "failed-user",
+      "ClickTime": "2026-08-31T12:00:00Z",
+      "AuthHost": "login-review.example.invalid",
+      "ClickIP": "192.0.2.10",
+      "Navigated": true,
+      "OriginApproved": false
+    },
+    {
+      "ClickId": "same-ip",
+      "UserKey": "same-ip-user",
+      "ClickTime": "2026-08-31T12:00:00Z",
+      "AuthHost": "login-review.example.invalid",
+      "ClickIP": "192.0.2.10",
+      "Navigated": true,
+      "OriginApproved": false
+    },
+    {
+      "ClickId": "late",
+      "UserKey": "late-user",
+      "ClickTime": "2026-08-31T12:00:00Z",
+      "AuthHost": "login-review.example.invalid",
+      "ClickIP": "192.0.2.10",
+      "Navigated": true,
+      "OriginApproved": false
+    },
+    {
+      "ClickId": "before",
+      "UserKey": "before-user",
+      "ClickTime": "2026-08-31T12:00:00Z",
+      "AuthHost": "login-review.example.invalid",
+      "ClickIP": "192.0.2.10",
+      "Navigated": true,
+      "OriginApproved": false
+    },
+    {
+      "ClickId": "missing",
+      "UserKey": "missing-user",
+      "ClickTime": "2026-08-31T12:00:00Z",
+      "AuthHost": "login-review.example.invalid",
+      "ClickIP": "192.0.2.10",
+      "Navigated": true,
+      "OriginApproved": null
+    },
+    {
+      "ClickId": "wrong-user",
+      "UserKey": "wrong-user-user",
+      "ClickTime": "2026-08-31T12:00:00Z",
+      "AuthHost": "login-review.example.invalid",
+      "ClickIP": "192.0.2.10",
+      "Navigated": true,
+      "OriginApproved": false
+    },
+    {
+      "ClickId": "boundary",
+      "UserKey": "boundary-user",
+      "ClickTime": "2026-08-31T12:00:00Z",
+      "AuthHost": "login-review.example.invalid",
+      "ClickIP": "192.0.2.10",
+      "Navigated": true,
+      "OriginApproved": false
+    },
+    {
+      "ClickId": "future",
+      "UserKey": "future-user",
+      "ClickTime": "2026-08-31T23:59:00Z",
+      "AuthHost": "login-review.example.invalid",
+      "ClickIP": "192.0.2.10",
+      "Navigated": true,
+      "OriginApproved": false
+    },
+    {
+      "ClickId": "unknown-ip",
+      "UserKey": "unknown-ip-user",
+      "ClickTime": "2026-08-31T12:00:00Z",
+      "AuthHost": "login-review.example.invalid",
+      "ClickIP": "",
+      "Navigated": true,
+      "OriginApproved": false
+    }
+  ],
+  "signins": [
+    {
+      "SigninId": "s-positive",
+      "UserKey": "positive-user",
+      "SigninTime": "2026-08-31T12:05:00Z",
+      "SigninIP": "198.51.100.10",
+      "Success": true
+    },
+    {
+      "SigninId": "s-approved",
+      "UserKey": "approved-user",
+      "SigninTime": "2026-08-31T12:05:00Z",
+      "SigninIP": "198.51.100.10",
+      "Success": true
+    },
+    {
+      "SigninId": "s-blocked",
+      "UserKey": "blocked-user",
+      "SigninTime": "2026-08-31T12:05:00Z",
+      "SigninIP": "198.51.100.10",
+      "Success": true
+    },
+    {
+      "SigninId": "s-failed",
+      "UserKey": "failed-user",
+      "SigninTime": "2026-08-31T12:05:00Z",
+      "SigninIP": "198.51.100.10",
+      "Success": false
+    },
+    {
+      "SigninId": "s-same-ip",
+      "UserKey": "same-ip-user",
+      "SigninTime": "2026-08-31T12:05:00Z",
+      "SigninIP": "192.0.2.10",
+      "Success": true
+    },
+    {
+      "SigninId": "s-late",
+      "UserKey": "late-user",
+      "SigninTime": "2026-08-31T12:10:01Z",
+      "SigninIP": "198.51.100.10",
+      "Success": true
+    },
+    {
+      "SigninId": "s-before",
+      "UserKey": "before-user",
+      "SigninTime": "2026-08-31T11:59:59Z",
+      "SigninIP": "198.51.100.10",
+      "Success": true
+    },
+    {
+      "SigninId": "s-missing",
+      "UserKey": "missing-user",
+      "SigninTime": "2026-08-31T12:05:00Z",
+      "SigninIP": "198.51.100.10",
+      "Success": true
+    },
+    {
+      "SigninId": "s-wrong-user",
+      "UserKey": "another-user",
+      "SigninTime": "2026-08-31T12:05:00Z",
+      "SigninIP": "198.51.100.10",
+      "Success": true
+    },
+    {
+      "SigninId": "s-boundary",
+      "UserKey": "boundary-user",
+      "SigninTime": "2026-08-31T12:10:00Z",
+      "SigninIP": "198.51.100.10",
+      "Success": true
+    },
+    {
+      "SigninId": "s-future",
+      "UserKey": "future-user",
+      "SigninTime": "2026-09-01T00:00:01Z",
+      "SigninIP": "198.51.100.10",
+      "Success": true
+    },
+    {
+      "SigninId": "s-unknown-ip",
+      "UserKey": "unknown-ip-user",
+      "SigninTime": "2026-08-31T12:05:00Z",
+      "SigninIP": "198.51.100.10",
+      "Success": true
+    }
+  ],
+  "expected": [
+    {
+      "ClickId": "boundary",
+      "SigninId": "s-boundary",
+      "UserKey": "boundary-user"
+    },
+    {
+      "ClickId": "positive",
+      "SigninId": "s-positive",
+      "UserKey": "positive-user"
+    }
+  ]
+}

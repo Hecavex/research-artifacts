@@ -1,0 +1,19 @@
+// EXPERIMENTAL: Microsoft Defender XDR advanced-hunting KQL. Engine execution NOT VERIFIED.
+// Set the end time for a reproducible hunt. Review ActionType in your tenant.
+// Example fixed test window. Change only after the fixture review.
+let EndTime = datetime(2026-09-01T00:00:00Z);
+let Approved = datatable(DeviceId:string, RemoteIP:string, RemotePort:int, Process:string)
+[
+  "backup-a", "198.51.100.20", 445, "backup.exe"
+];
+// The single approval above is SYNTHETIC. Replace with reviewed, owned, expiring
+// DeviceId/IP/port/process exceptions. Never ship fixture approvals to production.
+DeviceNetworkEvents
+| where Timestamp > EndTime - 14d and Timestamp <= EndTime
+| where RemotePort in (139, 445) and RemoteIPType =~ "Public"
+| where isnotempty(RemoteIP) and isnotempty(DeviceId) and isnotempty(DeviceName)
+| where isnotempty(InitiatingProcessFileName) and isnotempty(ActionType) and isnotnull(ReportId)
+| extend Process = tolower(InitiatingProcessFileName)
+| join kind=leftanti Approved on DeviceId, RemoteIP, RemotePort, Process
+| project DeviceName, Timestamp, ReportId, RemoteIP, RemotePort, ActionType
+| order by DeviceName asc, Timestamp asc, ReportId asc

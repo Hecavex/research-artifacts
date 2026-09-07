@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Cite this experimental analytic version and its associated guide."
+title: "Experimental outbound SMB review analytic"
+version: 1.0.0
+date-released: "2026-09-07"
+type: software
+authors:
+  - family-names: "Lis"
+    given-names: "Deividas"
+    affiliation: "HECAVEX"
+url: "https://hecavex.com/en/research/t1187-forced-authentication-detection-mitigation/"
+repository-code: "https://github.com/Hecavex/research-artifacts"
+license: "CC-BY-4.0"
+

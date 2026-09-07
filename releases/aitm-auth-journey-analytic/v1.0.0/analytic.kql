@@ -1,0 +1,17 @@
+// EXPERIMENTAL: Kusto KQL over the custom normalized tables documented in README.
+// These are NOT built-in Defender or Sentinel tables. Engine execution NOT VERIFIED.
+let EndTime = datetime(2026-09-01T00:00:00Z);
+ClickEvents
+| where ClickTime > EndTime - 14d and ClickTime <= EndTime
+| where Navigated == true and OriginApproved == false
+| where isnotempty(ClickId) and isnotempty(UserKey) and isnotempty(AuthHost) and isnotempty(ClickIP)
+| join kind=inner (
+    SigninEvents
+    | where Success == true and isnotempty(SigninId) and isnotempty(SigninIP)
+    | where SigninTime <= EndTime
+) on UserKey
+| where SigninTime >= ClickTime and SigninTime <= ClickTime + 10m
+| where ClickIP != SigninIP
+| project ClickId, SigninId, UserKey
+| order by ClickId asc, SigninId asc, UserKey asc
+

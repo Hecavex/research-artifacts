@@ -1,0 +1,175 @@
+{
+  "synthetic": true,
+  "reference_time": "2026-09-01T00:00:00Z",
+  "notes": "Reserved TEST-NET addresses carry injected Public classification solely to exercise the rule. No traffic is sent. Row 2 remains a review lead even though the recorded connection failed.",
+  "approved_destinations": [
+    {
+      "DeviceId": "backup-a",
+      "RemoteIP": "198.51.100.20",
+      "RemotePort": 445,
+      "Process": "backup.exe",
+      "owner": "synthetic-fixture",
+      "review_by": "2026-09-30"
+    }
+  ],
+  "events": [
+    {
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "DeviceId": "device-a",
+      "DeviceName": "workstation-a.example.invalid",
+      "ReportId": 1,
+      "RemoteIP": "203.0.113.10",
+      "RemoteIPType": "Public",
+      "RemotePort": 445,
+      "InitiatingProcessFileName": "winword.exe",
+      "ActionType": "ConnectionSuccess"
+    },
+    {
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "DeviceId": "device-a",
+      "DeviceName": "workstation-a.example.invalid",
+      "ReportId": 2,
+      "RemoteIP": "203.0.113.10",
+      "RemoteIPType": "Public",
+      "RemotePort": 139,
+      "InitiatingProcessFileName": "explorer.exe",
+      "ActionType": "ConnectionFailed"
+    },
+    {
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "DeviceId": "device-a",
+      "DeviceName": "workstation-a.example.invalid",
+      "ReportId": 3,
+      "RemoteIP": "10.0.0.4",
+      "RemoteIPType": "Private",
+      "RemotePort": 445,
+      "InitiatingProcessFileName": "winword.exe",
+      "ActionType": "ConnectionSuccess"
+    },
+    {
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "DeviceId": "device-a",
+      "DeviceName": "workstation-a.example.invalid",
+      "ReportId": 4,
+      "RemoteIP": "203.0.113.10",
+      "RemoteIPType": "Public",
+      "RemotePort": 443,
+      "InitiatingProcessFileName": "winword.exe",
+      "ActionType": "ConnectionSuccess"
+    },
+    {
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "DeviceId": "backup-a",
+      "DeviceName": "workstation-a.example.invalid",
+      "ReportId": 5,
+      "RemoteIP": "198.51.100.20",
+      "RemoteIPType": "Public",
+      "RemotePort": 445,
+      "InitiatingProcessFileName": "backup.exe",
+      "ActionType": "ConnectionSuccess"
+    },
+    {
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "DeviceId": "device-a",
+      "DeviceName": "workstation-a.example.invalid",
+      "ReportId": 6,
+      "RemoteIP": "198.51.100.20",
+      "RemoteIPType": "Public",
+      "RemotePort": 445,
+      "InitiatingProcessFileName": "backup.exe",
+      "ActionType": "ConnectionSuccess"
+    },
+    {
+      "Timestamp": "2026-08-18T00:00:00Z",
+      "DeviceId": "device-a",
+      "DeviceName": "workstation-a.example.invalid",
+      "ReportId": 7,
+      "RemoteIP": "203.0.113.10",
+      "RemoteIPType": "Public",
+      "RemotePort": 445,
+      "InitiatingProcessFileName": "winword.exe",
+      "ActionType": "ConnectionSuccess"
+    },
+    {
+      "Timestamp": "2026-09-01T00:00:01Z",
+      "DeviceId": "device-a",
+      "DeviceName": "workstation-a.example.invalid",
+      "ReportId": 8,
+      "RemoteIP": "203.0.113.10",
+      "RemoteIPType": "Public",
+      "RemotePort": 445,
+      "InitiatingProcessFileName": "winword.exe",
+      "ActionType": "ConnectionSuccess"
+    },
+    {
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "DeviceId": "device-a",
+      "DeviceName": "workstation-a.example.invalid",
+      "ReportId": 9,
+      "RemoteIP": "203.0.113.10",
+      "RemoteIPType": null,
+      "RemotePort": 445,
+      "InitiatingProcessFileName": "winword.exe",
+      "ActionType": "ConnectionSuccess"
+    },
+    {
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "DeviceId": "device-a",
+      "DeviceName": "workstation-a.example.invalid",
+      "ReportId": 10,
+      "RemoteIP": "",
+      "RemoteIPType": "Public",
+      "RemotePort": 445,
+      "InitiatingProcessFileName": "winword.exe",
+      "ActionType": "ConnectionSuccess"
+    },
+    {
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "DeviceId": "device-a",
+      "DeviceName": "workstation-a.example.invalid",
+      "ReportId": 11,
+      "RemoteIP": "203.0.113.10",
+      "RemoteIPType": "Public",
+      "RemotePort": "445",
+      "InitiatingProcessFileName": "winword.exe",
+      "ActionType": "ConnectionSuccess"
+    },
+    {
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "DeviceId": "backup-a",
+      "DeviceName": "workstation-a.example.invalid",
+      "ReportId": 12,
+      "RemoteIP": "198.51.100.20",
+      "RemoteIPType": "Public",
+      "RemotePort": 445,
+      "InitiatingProcessFileName": "BACKUP.EXE",
+      "ActionType": "ConnectionSuccess"
+    }
+  ],
+  "expected": [
+    {
+      "DeviceName": "workstation-a.example.invalid",
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "ReportId": 1,
+      "RemoteIP": "203.0.113.10",
+      "RemotePort": 445,
+      "ActionType": "ConnectionSuccess"
+    },
+    {
+      "DeviceName": "workstation-a.example.invalid",
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "ReportId": 2,
+      "RemoteIP": "203.0.113.10",
+      "RemotePort": 139,
+      "ActionType": "ConnectionFailed"
+    },
+    {
+      "DeviceName": "workstation-a.example.invalid",
+      "Timestamp": "2026-08-31T12:00:00Z",
+      "ReportId": 6,
+      "RemoteIP": "198.51.100.20",
+      "RemotePort": 445,
+      "ActionType": "ConnectionSuccess"
+    }
+  ]
+}
