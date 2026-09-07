@@ -37,6 +37,9 @@ docs/
 
 ## Published bundles
 
+- [t1187-outbound-smb-analytic/v1.0.0](releases/t1187-outbound-smb-analytic/v1.0.0/README.md) - experimental outbound SMB review analytic with synthetic positive, negative and boundary fixtures. Portable Python tests pass. KQL engine execution and production efficacy are NOT VERIFIED.
+- [aitm-auth-journey-analytic/v1.0.0](releases/aitm-auth-journey-analytic/v1.0.0/README.md) - experimental correlation over an explicit custom authentication-journey schema. Portable Python tests pass. This is a review lead, not proof of Evilginx or token theft. KQL engine execution and production efficacy are NOT VERIFIED.
+
 - `hostinger-pages-phishing-2026/v1.1.1` - current publication-safe evidence for the Hostinger-themed Cloudflare Pages phishing investigation, including the complete defanged and role-classified domain inventory plus a bounded fixed-path response comparison. This patch corrects packaging integrity, not observations or findings. It excludes raw campaign content, full task URLs, personalized query strings, private scan identifiers and provider correspondence. Historical `v1.0.0` and `v1.1.0` remain immutable with an explicit [checksum erratum](docs/ERRATA-2026-09-07.md).
 
 - `adform-clipper-2026/v1.1.0` — current evidence package supporting the Adform JavaScript supply-chain investigation, including reproducible BTC and Ethereum tracing. `v1.0.0` remains immutable.

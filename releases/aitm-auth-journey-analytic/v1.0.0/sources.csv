@@ -1,0 +1,5 @@
+source_id,title,publisher,published_at,accessed_at,url,archive_url,role
+"guide","Evilginx Detection: Finding Reverse-Proxy Phishing and Session Theft","HECAVEX","2026-08-31","2026-09-07","https://hecavex.com/en/research/evilginx-detection/","","analytical scope"
+"click-schema","UrlClickEvents schema","Microsoft","","2026-09-07","https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-urlclickevents-table","","primary schema or query-language reference"
+"sign-schema","SigninLogs schema","Microsoft","","2026-09-07","https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/signinlogs","","primary schema or query-language reference"
+"join","Kusto inner join","Microsoft","","2026-09-07","https://learn.microsoft.com/en-us/kusto/query/join-inner","","primary schema or query-language reference"
