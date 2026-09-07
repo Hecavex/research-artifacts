@@ -37,7 +37,7 @@ docs/
 
 ## Published bundles
 
-- `hostinger-pages-phishing-2026/v1.1.0` - current publication-safe evidence for the Hostinger-themed Cloudflare Pages phishing investigation, including the complete defanged and role-classified domain inventory plus a bounded fixed-path response comparison. It excludes raw campaign content, full task URLs, personalized query strings, private scan identifiers and provider correspondence. `v1.0.0` remains immutable.
+- `hostinger-pages-phishing-2026/v1.1.1` - current publication-safe evidence for the Hostinger-themed Cloudflare Pages phishing investigation, including the complete defanged and role-classified domain inventory plus a bounded fixed-path response comparison. This patch corrects packaging integrity, not observations or findings. It excludes raw campaign content, full task URLs, personalized query strings, private scan identifiers and provider correspondence. Historical `v1.0.0` and `v1.1.0` remain immutable with an explicit [checksum erratum](docs/ERRATA-2026-09-07.md).
 
 - `adform-clipper-2026/v1.1.0` — current evidence package supporting the Adform JavaScript supply-chain investigation, including reproducible BTC and Ethereum tracing. `v1.0.0` remains immutable.
 
@@ -51,6 +51,9 @@ The validator discovers every semantic-version directory, checks required files,
 # Every release (the CI and portfolio default)
 python scripts/validate_bundle.py --all
 
+# Exact bytes delivered by Git, independent of workstation line endings
+python scripts/validate_bundle.py --all --git-export
+
 # One release while authoring
 python scripts/validate_bundle.py releases/adform-clipper-2026/v1.1.0
 ```
@@ -58,6 +61,12 @@ python scripts/validate_bundle.py releases/adform-clipper-2026/v1.1.0
 ## Citation
 
 Cite the article for narrative findings and the versioned artifact release for data or reproduction work. A `CITATION.cff` file is included in every release.
+
+New releases are prepared outside existing version directories. After finalizing
+their text, `python scripts/build_manifest.py releases/<case>/<new-version>`
+normalizes text to LF and hashes the final bytes. It refuses already committed
+release directories. CI tests both Windows and Linux and rejects changes to
+versions already present in the trusted pre-change Git revision.
 
 ## Licence
 

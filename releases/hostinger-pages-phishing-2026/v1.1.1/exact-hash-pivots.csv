@@ -1,0 +1,6 @@
+"sha256","artifact_role","first_observed","last_observed","urlscan_observations","task_domains","confidence","source_id","notes"
+"728d235b2ad22aa3e0f9147f267256d06b80e5ebd7bd61daa1499c1ab6f50af5","latest root document","2026-07-20","2026-08-24","100 returned of 128 reported","","high","hecavex-investigation","Returned result was truncated; do not infer the missing 28"
+"9805613dfd2c4b09e3080d0fabbfb8476efff9cd57775481df5a523922b311c2","credential-harvesting JavaScript","2025-12-23","2026-08-24","467","262","high","hecavex-investigation","Exact byte reuse; 462 observations overlapped the long hostname family"
+"563824f1917c8b2be9d54cc5b3c5dbcfd1b8cc9198039a3f54fe705d08ee6d5d","current tracking JavaScript","2026-04-21","2026-08-24","452","","high","hecavex-investigation","451 observations overlapped the exact credential harvester"
+"b4f03187184e98f148b8fce890a35849a41f86aff938965138bf8a2346cf7d10","legacy tracking JavaScript","2026-03-25","2026-04-14","13","","high","hecavex-investigation","All 13 observations overlapped the exact credential harvester"
+"9201f2ee02b6b642504b09f95e61a57a2bcff43e23c7d737473229e2e4f7d503","generic anti-inspection JavaScript","2024-01-11","2026-08-24","5079 reported / 1000 returned","","low alone","hecavex-investigation","Broad commodity signal across many lure families"

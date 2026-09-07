@@ -14,8 +14,14 @@ import hashlib
 import json
 import re
 import sys
+import io
+import subprocess
+import tarfile
+import tempfile
 from pathlib import Path, PurePosixPath
 from urllib.parse import urlparse
+
+from release_integrity import immutable_release_errors, known_line_ending_erratum
 
 REQUIRED = {
     "README.md",
@@ -223,9 +229,12 @@ def validate(bundle: Path) -> list[str]:
         if not candidate.is_file():
             errors.append(f"Manifest file is missing: {relative}")
             continue
-        if SHA256_RE.fullmatch(declared_hash) and sha256(candidate).lower() != declared_hash.lower():
+        historical_erratum = known_line_ending_erratum(bundle, relative, declared_hash, raw_size)
+        if historical_erratum:
+            print(f"ERRATUM [{bundle.parent.name}/{bundle.name}]: {relative}: documented CRLF/LF packaging discrepancy, see docs/ERRATA-2026-09-07.md")
+        if not historical_erratum and SHA256_RE.fullmatch(declared_hash) and sha256(candidate).lower() != declared_hash.lower():
             errors.append(f"SHA-256 mismatch: {relative}")
-        if raw_size.isdigit() and candidate.stat().st_size != int(raw_size):
+        if not historical_erratum and raw_size.isdigit() and candidate.stat().st_size != int(raw_size):
             errors.append(f"Size mismatch: {relative}")
 
     unlisted = sorted(
@@ -280,6 +289,8 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("bundle", nargs="?", type=Path, help="Path to one versioned research bundle")
     parser.add_argument("--all", action="store_true", help="Discover and validate every version under releases/")
+    parser.add_argument("--base", help="Trusted full prior commit SHA for published-release immutability checks")
+    parser.add_argument("--git-export", action="store_true", help="Validate exact committed HEAD bytes, not the working copy")
     parser.add_argument(
         "--releases-root",
         type=Path,
@@ -289,6 +300,26 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     if args.all == (args.bundle is not None):
         parser.error("choose exactly one: a bundle path or --all")
+
+    repository = Path(__file__).resolve().parents[1]
+    if args.base:
+        try:
+            history_errors = immutable_release_errors(repository, args.base)
+        except (ValueError, subprocess.CalledProcessError) as error:
+            _print_errors("history", [str(error)])
+            return 1
+        if history_errors:
+            _print_errors("history", history_errors)
+            return 1
+    if args.git_export:
+        if not args.all:
+            parser.error("--git-export requires --all")
+        archive = subprocess.check_output(["git", "archive", "--format=tar", "HEAD", "releases"], cwd=repository)
+        with tempfile.TemporaryDirectory(prefix="hecavex-release-check-") as temporary:
+            root = Path(temporary)
+            with tarfile.open(fileobj=io.BytesIO(archive)) as source:
+                source.extractall(root, filter="data")
+            return main(["--all", "--releases-root", str(root / "releases")])
 
     if args.all:
         bundles, discovery_errors = discover_bundles(args.releases_root)
